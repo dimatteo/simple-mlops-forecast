@@ -4,7 +4,7 @@
     {
       "task_key": "Train_Model",
       "notebook_task": {
-        "notebook_path": "/Users/Users/di.matteo.leonardo@gmail.com/simple-mlops-forecast/train.py",
+        "notebook_path": "/Users/di.matteo.leonardo@gmail.com/simple-mlops-forecast/train.py",
         "source": "WORKSPACE"
       }
     }
