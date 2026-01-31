@@ -1,0 +1,22 @@
+name: MLOps-Serverless-CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-train:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Trigger Databricks Job
+        uses: databricks/run-now@v0
+        with:
+          # Replace with your actual Job ID
+          job-id: 123456789 
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
