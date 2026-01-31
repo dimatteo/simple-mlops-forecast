@@ -3,9 +3,25 @@
   "tasks": [
     {
       "task_key": "Train_Model",
-      "notebook_task": {
-        "notebook_path": "/Users/di.matteo.leonardo@gmail.com/simple-mlops-forecast/train.py",
+      "spark_python_task": {
+        "python_file": "/Users/di.matteo.leonardo@gmail.com/simple-mlops-forecast/train.py",
         "source": "WORKSPACE"
+      },
+      "environment_key": "mlops_env"
+    }
+  ],
+  "environments": [
+    {
+      "environment_key": "mlops_env",
+      "spec": {
+        "client": "1",
+        "dependencies": {
+          "libraries": [
+            { "pypi": { "package": "mlflow" } },
+            { "pypi": { "package": "pandas" } },
+            { "pypi": { "package": "scikit-learn" } }
+          ]
+        }
       }
     }
   ],

@@ -19,7 +19,7 @@ jobs:
       # 2. Run the Job using the CLI (Replace 123456789 with your Job ID)
       - name: Trigger Databricks Job
         run: |
-          databricks jobs run-now 482057442749587
+          databricks jobs run-now 647647450999793
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
