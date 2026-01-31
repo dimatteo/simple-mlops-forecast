@@ -1,2 +1,2 @@
 # simple-mlops-forecast
-A simple end to end MLOps forecast
+A simple end to end MLOps forecast, testing an interesting stack.
