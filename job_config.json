@@ -14,7 +14,7 @@
     {
       "environment_key": "mlops_env",
       "spec": {
-        "client": "1",
+        "environment_version": "4",
         "dependencies": {
           "libraries": [
             { "pypi": { "package": "mlflow" } },
@@ -25,10 +25,6 @@
       }
     }
   ],
-  "queue": {
-    "enabled": true
-  },
-  "run_as": {
-    "user_name": "di.matteo.leonardo@gmail.com"
-  }
+  "queue": { "enabled": true },
+  "run_as": { "user_name": "di.matteo.leonardo@gmail.com" }
 }
