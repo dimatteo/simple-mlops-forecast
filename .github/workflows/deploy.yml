@@ -12,11 +12,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # 1. Install the official Databricks CLI
+      - name: Setup Databricks CLI
+        uses: databricks/setup-cli@main
+
+      # 2. Run the Job using the CLI (Replace 123456789 with your Job ID)
       - name: Trigger Databricks Job
-        uses: databricks/run-now@v0
-        with:
-          # Replace with your actual Job ID
-          job-id: 123456789 
+        run: |
+          databricks jobs run-now 481984564547708
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
